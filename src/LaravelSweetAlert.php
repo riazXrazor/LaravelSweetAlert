@@ -20,7 +20,7 @@ class LaravelSweetAlert
 
     public static function getTask()
     {
-        $data = session('LaravelSweetAlertTask');
+        $data = session('LaravelSweetAlerttask');
         return $data;
     }
 
