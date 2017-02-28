@@ -7,20 +7,20 @@ class LaravelSweetAlert
 
     public static function setMessage($msg,$task = '')
     {
-        session()->flash('message',json_encode($msg));
+        session()->flash('LaravelSweetAlertMessage',json_encode($msg));
         if($task)
             session()->flash('task',$task);
     }
 
     public static function getMessage()
     {
-        $data = session('message');
+        $data = session('LaravelSweetAlertMessage');
         return $data;
     }
 
     public static function getTask()
     {
-        $data = session('task');
+        $data = session('LaravelSweetAlertTask');
         return $data;
     }
 
