@@ -1,7 +1,7 @@
 <?php
 
 
-namespace riazXrazor\LaravelSweetAlert;
+namespace riazxrazor\LaravelSweetAlert;
 
 
 use Illuminate\Support\Facades\Blade;

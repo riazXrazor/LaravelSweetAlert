@@ -1,6 +1,6 @@
 <?php
 
-namespace riazXrazor\LaravelSweetAlert;
+namespace riazxrazor\LaravelSweetAlert;
 
 class LaravelSweetAlert
 {
