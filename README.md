@@ -1,9 +1,9 @@
 
 # LaravelSweetAlert
 
-[![GitHub Author](https://img.shields.io/badge/author-@astrotomic-orange.svg?style=flat-square)](https://github.com/riazXrazor)
+[![GitHub Author](https://img.shields.io/badge/author-@riazXrazor-blue.svg?style=flat-square)](https://github.com/riazXrazor)
 [![GitHub release](https://img.shields.io/github/release/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://github.com/riazXrazor/LaravelSweetAlert/releases)
-[![GitHub license](https://img.shields.io/badge/license-GPL-3-blue.svg?style=flat-square)](https://raw.githubusercontent.com/riazXrazor/LaravelSweetAlert/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-License-GPL%20v3-blue.svg?style=flat-square)](https://raw.githubusercontent.com/riazXrazor/LaravelSweetAlert/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://github.com/riazXrazor/LaravelSweetAlert/issues)
 
 [![StyleCI](https://styleci.io/repos/83233450/shield)](https://styleci.io/repos/83233450)
