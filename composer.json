@@ -1,5 +1,5 @@
 {
-    "name": "riazxrazor/laravel-sweet-alert",
+    "name": "riazXrazor/LaravelSweetAlert",
     "description": "Laravel package to show beautiful flash message",
     "type": "library",
     "license": "GPL-3",
@@ -9,6 +9,6 @@
             "email": "riazcool77@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
