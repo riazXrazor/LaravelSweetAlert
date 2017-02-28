@@ -24,7 +24,7 @@ Open `composer.json` and add this line below.
 ```json
 {
     "require": {
-        "riazXrazor/LaravelSweetAlert": "^1.0.0"
+        "riazxrazor/laravel-sweet-alert": "^1.0.0"
     }
 }
 ```
@@ -32,7 +32,7 @@ Open `composer.json` and add this line below.
 Or you can run this command from your project directory.
 
 ```console
-composer require riazXrazor/LaravelSweetAlert
+composer require riazxrazor/laravel-sweet-alert
 ```
 
 ## Configuration
