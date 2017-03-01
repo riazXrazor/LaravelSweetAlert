@@ -1,7 +1,8 @@
 <?php
 
-
 namespace Riazxrazor\LaravelSweetAlert;
+
+
 
 
 use Illuminate\Support\Facades\Blade;
@@ -65,14 +66,13 @@ class LaravelSweetAlertServiceProvider extends ServiceProvider
      */
     public function register()
     {
-//        $this->app->singleton(LaravelSweetAlert::class, function ($app) {
-//            return new LaravelSweetAlert;
-//        });
+
 
         $this->app->bind(LaravelSweetAlert::class, function($app){
             return new LaravelSweetAlert;
         });
 
         $this->app->alias(LaravelSweetAlert::class, 'laravel-sweet-alert');
+
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Riazxrazor\LaravelSweetAlert;
 
+
+
 class LaravelSweetAlert
 {
 
