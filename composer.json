@@ -1,0 +1,23 @@
+{
+    "name": "riazxrazor/laravel-sweet-alert",
+    "description": "Laravel package to show beautiful flash message",
+    "type": "library",
+    "license": "GPL-3",
+    "authors": [
+        {
+            "name": "Riaz Laskar",
+            "email": "riazcool77@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Riazxrazor\\LaravelSweetAlert\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
