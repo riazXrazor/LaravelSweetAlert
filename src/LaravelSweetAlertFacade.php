@@ -2,7 +2,6 @@
 
 namespace Riazxrazor\LaravelSweetAlert;
 
-
 use Illuminate\Support\Facades\Facade;
 
 class LaravelSweetAlertFacade extends Facade
@@ -16,5 +15,4 @@ class LaravelSweetAlertFacade extends Facade
     {
         return 'laravel-sweet-alert';
     }
-
 }
