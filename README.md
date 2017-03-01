@@ -24,7 +24,7 @@ Open `composer.json` and add this line below.
 ```json
 {
     "require": {
-        "riazxrazor/laravel-sweet-alert": "^1.0.0"
+        "riazxrazor/laravel-sweet-alert": "^1.1.0"
     }
 }
 ```
@@ -40,7 +40,14 @@ composer require riazxrazor/laravel-sweet-alert
 Open the `config/app.php` and add this line in `providers` section.
 
 ```php
-riazxrazor\LaravelSweetAlert\LaravelSweetAlertServiceProvider::class,
+Riazxrazor\LaravelSweetAlert\LaravelSweetAlertServiceProvider::class,
+```
+
+add this line in the `aliases` section.
+
+```php
+'LaravelSweetAlert' => Riazxrazor\LaravelSweetAlert\LaravelSweetAlert::class
+
 ```
 
 Publish public `assets` by running this command.
@@ -66,7 +73,7 @@ You can use the function like this.
 
 ```php
 // top of controller
-use riazxrazor\LaravelSweetAlert;
+use Riazxrazor\LaravelSweetAlert;
 
 // in the controller method 
 LaravelSweetAlert::setMessageSuccess("flash message")
