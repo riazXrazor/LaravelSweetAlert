@@ -73,7 +73,7 @@ You can use the function like this.
 
 ```php
 // top of controller
-use Riazxrazor\LaravelSweetAlert;
+use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
 
 // in the controller method 
 LaravelSweetAlert::setMessageSuccess("flash message")
