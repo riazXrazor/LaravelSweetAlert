@@ -2,7 +2,7 @@
     "name": "riazxrazor/laravel-sweet-alert",
     "description": "Laravel package to show beautiful flash message",
     "type": "library",
-    "license": "GPL-3",
+    "license": "MIT",
     "authors": [
         {
             "name": "Riaz Laskar",
