@@ -18,6 +18,5 @@
             "Riazxrazor\\LaravelSweetAlert\\": "src"
         }
     },
-    "minimum-stability": "dev",
-    "require": {}
+    "minimum-stability": "dev"
 }
