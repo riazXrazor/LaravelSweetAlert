@@ -16,6 +16,9 @@ Its basically a laravel wrapper for the beautiful
 and very good and useful jquery plugin
 [SweetAlert2](https://limonte.github.io/sweetalert2)
 .
+Using `SweetAlert2 : 7.13.0`
+
+
 
 ## Installation
 
@@ -24,7 +27,7 @@ Open `composer.json` and add this line below.
 ```json
 {
     "require": {
-        "riazxrazor/laravel-sweet-alert": "^1.1.0"
+        "riazxrazor/laravel-sweet-alert": "^1.2.0"
     }
 }
 ```
@@ -55,12 +58,6 @@ Publish public `assets` by running this command.
 ```console
 php artisan vendor:publish --tag=public --force
 ```
-
-Place this blade directive at the `head` section of the html of 
-layout blade template
-```blade
-@LaravelSweetAlertCSS
-```
 Place this blade directive at the end before `</body>` section of the html of 
 layout blade template
 ```blade
@@ -72,14 +69,13 @@ layout blade template
 You can use the function like this.
 
 ```php
-// top of controller
-use Riazxrazor\LaravelSweetAlert\LaravelSweetAlert;
+
 
 // in the controller method 
-LaravelSweetAlert::setMessageSuccess("flash message")
-LaravelSweetAlert::setMessageError("error flash message")
-LaravelSweetAlert::setMessageSuccessConfirm("flash message")
-LaravelSweetAlert::setMessageErrorConfirm("error flash message")
+\LaravelSweetAlert::setMessageSuccess("flash message")
+\LaravelSweetAlert::setMessageError("error flash message")
+\LaravelSweetAlert::setMessageSuccessConfirm("flash message")
+\LaravelSweetAlert::setMessageErrorConfirm("error flash message")
 
 // for more customization
 
@@ -90,6 +86,29 @@ LaravelSweetAlert::setMessageErrorConfirm("error flash message")
                         'type' => 'success',
                         'showConfirmButton' =>false
                     ]);
+                    
+
+\LaravelSweetAlert::setMessage([
+        'title' => 'Auto close alert!',
+        'text' => 'I will close in 5 seconds.',
+        'timer' =>  5000,
+            'onOpen' => '() => { swal.showLoading() }',
+        ],
+        
+        // second argument array of js function each element will be a then to swal
+        
+        ['(result) => {
+  if (
+    // Read more about handling dismissals
+    result.dismiss === swal.DismissReason.timer
+  ) {
+    console.log("I was closed by the timer")
+  }
+}'],
+
+// third argument is a catch function to the promise of swal
+
+'(e)=>console.log(e)'); 
 
 ```
 
