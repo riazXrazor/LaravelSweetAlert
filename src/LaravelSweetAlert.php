@@ -8,12 +8,11 @@ class LaravelSweetAlert
     {
         session()->flash('LaravelSweetAlertMessage', json_encode($msg));
 
-        
         if ($then) {
             session()->flash('LaravelSweetAlertMessageThen', json_encode($then));
         }
-       
-       if ($catch) {
+
+        if ($catch) {
             session()->flash('LaravelSweetAlertMessageCatch', $catch);
         }
     }
@@ -31,8 +30,8 @@ class LaravelSweetAlert
 
         return $data;
     }
-    
-     public static function getCatch()
+
+    public static function getCatch()
     {
         $data = session('LaravelSweetAlertMessageCatch');
 
