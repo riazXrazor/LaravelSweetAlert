@@ -4,11 +4,17 @@ namespace Riazxrazor\LaravelSweetAlert;
 
 class LaravelSweetAlert
 {
-    public static function setMessage($msg, $task = '')
+    public static function setMessage($msg, $then = '', $catch = '')
     {
         session()->flash('LaravelSweetAlertMessage', json_encode($msg));
-        if ($task) {
-            session()->flash('task', $task);
+
+        
+        if ($then) {
+            session()->flash('LaravelSweetAlertMessageThen', json_encode($then));
+        }
+       
+       if ($catch) {
+            session()->flash('LaravelSweetAlertMessageCatch', $catch);
         }
     }
 
@@ -19,9 +25,16 @@ class LaravelSweetAlert
         return $data;
     }
 
-    public static function getTask()
+    public static function getThen()
     {
-        $data = session('LaravelSweetAlerttask');
+        $data = session('LaravelSweetAlertMessageThen');
+
+        return $data;
+    }
+    
+     public static function getCatch()
+    {
+        $data = session('LaravelSweetAlertMessageCatch');
 
         return $data;
     }
