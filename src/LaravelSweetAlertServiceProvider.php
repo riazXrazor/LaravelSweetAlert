@@ -32,10 +32,28 @@ class LaravelSweetAlertServiceProvider extends ServiceProvider
             $html .= 'console.log(flashObj);';
             $html .= 'if(flashObj)';
             $html .= ' {
+            
+            
+            if(flashObj.onBeforeOpen)
+            {
+               flashObj.onBeforeOpen = eval(flashObj.onBeforeOpen) 
+            }
+            
+            if(flashObj.onOpen)
+            {
+               flashObj.onOpen = eval(flashObj.onOpen) 
+            }
+            
+            if(flashObj.onClose)
+            {
+               flashObj.onClose = eval(flashObj.onClose) 
+            }
+
+            console.log(flashObj);
                                     swal(flashObj)
                                     ';
             $html .= '<?php  if(LaravelSweetAlert::getTask()){ ?>';
-            $html .= '.then(<?=LaravelSweetAlert::gettask()?>)';
+            $html .= '.then(<?=LaravelSweetAlert::getTask()?>)';
             $html .= '<?php   } ?>';
             $html .= ';
                                     }';
