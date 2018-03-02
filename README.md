@@ -7,9 +7,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://github.com/riazXrazor/LaravelSweetAlert/issues)
 
 [![StyleCI](https://styleci.io/repos/83233450/shield)](https://styleci.io/repos/83233450)
-[![Code Climate](https://img.shields.io/codeclimate/github/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://codeclimate.com/github/riazXrazor/LaravelSweetAlert)
-[![Code Climate](https://img.shields.io/codeclimate/coverage/github/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://codeclimate.com/github/riazXrazor/LaravelSweetAlert/coverage)
-[![Code Climate](https://img.shields.io/codeclimate/issues/github/riazXrazor/LaravelSweetAlert.svg?style=flat-square)](https://codeclimate.com/github/riazXrazor/LaravelSweetAlert/issues)
 
 Laravel package to show beautiful flash message.
 Its basically a laravel wrapper for the beautiful
