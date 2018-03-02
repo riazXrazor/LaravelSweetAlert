@@ -24,11 +24,10 @@ class LaravelSweetAlertServiceProvider extends ServiceProvider
             $html[] = '<script>';
 
             $html[] = '$(function () { ';
-
             $html[] = '<?php  if(LaravelSweetAlert::getMessage()){ ?>';
-            $html[] = 'var flashMsg = \'<?= LaravelSweetAlert::getMessage() ?>\';';
+            $html[]= 'var flashObj = <?= LaravelSweetAlert::getMessage() ?>;';
             //$html[]= 'console.log(flashMsg);';
-            $html[] = 'var flashObj = $.parseJSON(flashMsg);';
+            //$html[] = 'var flashObj = $.parseJSON(flashMsg);';
             // $html[]= 'console.log("ok");';
             $html[] = 'if(flashObj)';
             $html[] = ' {
