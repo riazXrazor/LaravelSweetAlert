@@ -21,18 +21,12 @@ class LaravelSweetAlertServiceProvider extends ServiceProvider
 
         Blade::directive('LaravelSweetAlertJS', function ($expression) {
             $html[] = '<script src="'.URL::asset('vendor/LaravelSweetAlert/js/sweetalert2.all.js').'"></script>';
-            $html[] = '<script>';
-
-            $html[] = '$(function () { ';
-            $html[] = '<?php  if(LaravelSweetAlert::getMessage()){ ?>';
+            $html[]= '<script>';
+            $html[]= '$(function () { ';
+            $html[]= '<?php  if(LaravelSweetAlert::getMessage()){ ?>';
             $html[]= 'var flashObj = <?= LaravelSweetAlert::getMessage() ?>;';
-            //$html[]= 'console.log(flashMsg);';
-            //$html[] = 'var flashObj = $.parseJSON(flashMsg);';
-            // $html[]= 'console.log("ok");';
-            $html[] = 'if(flashObj)';
-            $html[] = ' {
-            
-            
+            $html[]= 'if(flashObj)';
+            $html[]= ' {            
             if(flashObj.onBeforeOpen)
             {
                flashObj.onBeforeOpen = eval(flashObj.onBeforeOpen) 
@@ -47,28 +41,24 @@ class LaravelSweetAlertServiceProvider extends ServiceProvider
             {
                flashObj.onClose = eval(flashObj.onClose) 
             }
-
-           // console.log(flashObj);
-                                    swal(flashObj)
+             swal(flashObj)
                                     ';
-            $html[] = '<?php  if(LaravelSweetAlert::getThen()){ 
+            $html[]= '<?php  if(LaravelSweetAlert::getThen()){ 
                 $thens = json_decode(LaravelSweetAlert::getThen());
                 foreach($thens as $then){
             ?>';
-            $html[] = '.then(<?= $then ?>)';
-            $html[] = '<?php  } } ?>';
+            $html[]= '.then(<?= $then ?>)';
+            $html[]= '<?php  } } ?>';
+            
+            $html[]= '<?php  if(LaravelSweetAlert::getCatch()){ ?>';
+            $html[]= '.catch(<?=LaravelSweetAlert::getCatch()?>)';
+            $html[]= '<?php   } ?>';
+            $html[]= ';}';
+            $html[]= '<?php   } ?>';
+            $html[]= '});';
+            $html[]= '</script>';
 
-            $html[] = '<?php  if(LaravelSweetAlert::getCatch()){ ?>';
-            $html[] = '.catch(<?=LaravelSweetAlert::getCatch()?>)';
-            $html[] = '<?php   } ?>';
-
-            $html[] = ';}';
-
-            $html[] = '<?php   } ?>';
-            $html[] = '});';
-            $html[] = '</script>';
-
-            return implode("\n", $html);
+            return implode("\n",$html);
         });
 
         Blade::directive('LaravelSweetAlertCSS', function ($expression) {
